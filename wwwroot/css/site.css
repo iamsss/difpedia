@@ -30,7 +30,7 @@
 }
 .main-container--logo {
     text-align: center;
-    padding: 30px;
+    padding: 40px 30px 20px 30px;
 }
 img.img-icon {
     width: 120px;
@@ -61,7 +61,7 @@ input.inpDif {
 
 .main-container--input {
     display: flex;
-    padding: 30px 15px;
+    padding: 30px 15px 45px 15px;
     padding-top: 20px;
     align-content: center;
 }
@@ -129,9 +129,64 @@ a.siteMap {
             .main-container{
                 margin:100px 30%;
             }
+            .main-container--input {
+                display: flex;
+                padding: 30px 45px 45px 45px;
+                padding-top: 20px;
+                align-content: center;
+            }
             }
 
 
 @media screen and (max-width: 767px) {
    
+}
+
+
+
+/* Login Page */
+
+.main-container2--input {
+    display: block;
+    /* padding: 30px 15px 45px 15px; */
+    /* padding-top: 20px; */
+    text-align: center;
+}
+
+.main-container2--input--box {
+    padding: 2% 10%;
+}
+
+input.inpDif2 {
+    width: 90%;
+    padding: 4%;
+    outline: 0;
+    border: 1px solid #f15d77;
+}
+
+.primary-btn {
+    width: 79%;
+    padding: 10px;
+    margin: 15px 20px 40px 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-family: inherit;
+    background: #3f344a;
+    outline: 0;
+    border: 1px solid #df0d5473;
+}
+
+
+@media screen and (max-width: 767px) {
+   
+    .main-container2--input--box {
+        padding: 2% 20%;
+    }
+
+    
+.primary-btn {
+    width: 59%;
+}
+  
 }
