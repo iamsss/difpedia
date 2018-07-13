@@ -12553,11 +12553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\desktop\\project\\difpediaproject\\difpediaProject.csproj",
+      "projectUniqueName": "C:\\Users\\user\\desktop\\project\\difpediaProject\\difpediaProject.csproj",
       "projectName": "difpediaProject",
-      "projectPath": "C:\\Users\\user\\desktop\\project\\difpediaproject\\difpediaProject.csproj",
+      "projectPath": "C:\\Users\\user\\desktop\\project\\difpediaProject\\difpediaProject.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\desktop\\project\\difpediaproject\\obj\\",
+      "outputPath": "C:\\Users\\user\\desktop\\project\\difpediaProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

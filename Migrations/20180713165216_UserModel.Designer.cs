@@ -11,9 +11,10 @@ using System;
 namespace difpediaProject.Migrations
 {
     [DbContext(typeof(difpediaProjectDbContext))]
-    partial class difpediaProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180713165216_UserModel")]
+    partial class UserModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,19 +28,17 @@ namespace difpediaProject.Migrations
 
                     b.Property<DateTime>("AddedOn");
 
-                    b.Property<int>("Balance");
-
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100);
-
-                    b.Property<string>("Password")
                         .IsRequired();
 
-                    b.Property<int>("ReferalUserId");
+                    b.Property<string>("Role");
 
-                    b.Property<string>("Role")
+                    b.Property<int>("balance");
+
+                    b.Property<string>("password")
                         .IsRequired();
+
+                    b.Property<int>("referalUserId");
 
                     b.HasKey("Id");
 

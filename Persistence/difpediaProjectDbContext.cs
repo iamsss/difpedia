@@ -1,3 +1,4 @@
+using difpediaProject.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace difpediaProject.Persistence
@@ -9,5 +10,7 @@ namespace difpediaProject.Persistence
        {
            
        }
+
+       public DbSet<User> Users { get; set; }
     }
 }

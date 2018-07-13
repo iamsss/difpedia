@@ -34,27 +34,7 @@
         </div>
     </div>
 
-    <div class="Dif-footer" id="foot">
-        <h4 class="FHeading">Follow Us</h4>
-        <span class="Fspan">
-            <img src="/images/Social%20Media/001-facebook.png" class="Dif-Social">
-        </span>
-        <span>
-            <img src="/images/Social%20Media/005-twitter.png" class="Dif-Social">
-        </span>
-        <span>
-            <a href="https://www.youtube.com/channel/UCmToCq0VzNMdwzIxrv3e-9w/videos">
-                <img src="/images/Social%20Media/003-youtube.png" class="Dif-Social">
-            </a>
-        </span>
-        <span>
-            <img src="/images/Social%20Media/004-instagram.png" class="Dif-Social">
-            <span class="f-con" style="">Copyright © 2017 · TeamWCRH ·
-                <a href="/Link/SiteMap.aspx" class="siteMap">SiteMap</a>
-            </span>
-        </span>
-    </div>
-
+    @await Html.PartialAsync("_Footer")
 </body>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
