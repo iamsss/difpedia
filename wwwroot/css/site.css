@@ -1,35 +1,137 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    font-family:Exo,sans-serif;
+}
+.main {
+    padding: 1px;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #e22867, #ce1352, #ff0459);
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.main-container {
+
+    margin: 100px 5%;
+    background: white;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+
+
+
+.FHeading{
+    padding: 20px;
+   text-align: center;
+   color: aliceblue;
+   margin: 0;
+}
+.Fspan{
+   display:inline-block;
+}
+.main-container--logo {
+    text-align: center;
+    padding: 30px;
+}
+img.img-icon {
+    width: 120px;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
+.main-container--text {
+    POSITION: RELATIVE;
+    TEXT-ALIGN: CENTER;
+    COLOR: #4c462c;
+    TOP: -10PX;
+    letter-spacing: 4px;
+    font-size: 36px;
+    font-weight: 1000;
+}
+
+.main-container--input {
+    padding: 30px;
+}
+
+input.inpDif {
+    width: 100%;
+    padding: 18px;
+    outline: 0;
+    border: 1px solid #f15d77;
+}
+
+
+
+.main-container--input {
+    display: flex;
+    padding: 30px 15px;
+    padding-top: 20px;
+    align-content: center;
+}
+
+.main-container--input--box {
     width: 100%;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+
+.main-container--input--icon {
+    background: #3f344a;
+    padding: 9px;
+    width: 35px;
+}
+img.search-icon {
+    width: 100%;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+.Dif-footer{
+      text-align: center;
+   background: #3f344a;
+}
+.f-con{
+    font-size: 14px;
+   display: block;
+   color: #efefef;
+   text-align: center;
+   padding: 20px;
+}
+img.Dif-Social {
+   CURSOR: POINTER;
+   PADDING: 0px 14PX;
+}
+
+a.siteMap {
+    text-decoration: none;
+    color: #fffffff0;
+}
+
+
+@media screen and (min-width: 520px) {
+    .main-container--input--icon {
+        padding: 11px;
+        width: 30px;
     }
+    .main-container{
+        margin:100px 15%;
+    }
+
+}
+
+@media screen and (min-width: 670px) {
+    .main-container{
+        margin:100px 20%;
+    }
+    }
+
+
+    @media screen and (min-width: 1000px) {
+        .main-container{
+            margin:100px 25%;
+        }
+        }
+        @media screen and (min-width: 1200px) {
+            .main-container{
+                margin:100px 30%;
+            }
+            }
+
+
+@media screen and (max-width: 767px) {
+   
 }
