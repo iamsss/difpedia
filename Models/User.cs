@@ -16,6 +16,6 @@ namespace difpediaProject.Models
 
         public int ReferalUserId { get; set; }
         public int Balance { get; set; }
-        public DateTime AddedOn  { get; set; }
+        public DateTime? AddedOn  { get; set; }
     }
 }

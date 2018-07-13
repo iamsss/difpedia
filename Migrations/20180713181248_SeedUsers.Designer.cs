@@ -11,9 +11,10 @@ using System;
 namespace difpediaProject.Migrations
 {
     [DbContext(typeof(difpediaProjectDbContext))]
-    partial class difpediaProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180713181248_SeedUsers")]
+    partial class SeedUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
