@@ -1,6 +1,8 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using difpediaProject.Models;
+using difpediaProject.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -12,11 +14,15 @@ namespace difpediaProject.Controllers
     public class TokenController : Controller
     {
         
+        private readonly difpediaProjectDbContext context;
+
+        
         private IConfiguration _config;
 
-        public TokenController(IConfiguration config)
+        public TokenController(IConfiguration config, difpediaProjectDbContext context)
         {
             _config = config;
+             this.context = context;
         }
 
         [AllowAnonymous]
@@ -36,7 +42,7 @@ namespace difpediaProject.Controllers
         }
         
 
-        private string BuildToken(UserModel user)
+        private string BuildToken(User user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -49,29 +55,23 @@ namespace difpediaProject.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private UserModel Authenticate(LoginModel login)
+        private User Authenticate(LoginModel login)
         {
-            UserModel user = null;
-
-            if (login.Username == "mario" && login.Password == "secret")
-            {
-                user = new UserModel { Name = "Mario Rossi", Email = "mario.rossi@domain.com" };
-            }
-            return user;
+           
+             var user = context.Users.Find(login.Id);
+             if(user != null && user.Password == login.Password) {
+                return user;
+            } 
+            return user;  
         }
 
         public class LoginModel
         {
-            public string Username { get; set; }
+            public int Id { get; set; }
             public string Password { get; set; }
         }
 
-        private class UserModel
-        {
-            public string Name { get; set; }
-            public string Email { get; set; }
-            public DateTime Birthdate { get; set; }
-        }
+       
     
 
     }
