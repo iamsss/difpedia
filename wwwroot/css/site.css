@@ -177,9 +177,33 @@ input.inpDif2 {
     border: 1px solid #df0d5473;
 }
 
+/* Nav Bar Css */
+
+.nav-head {
+    padding: 1px 1px 1px 5%;
+    background: #e0234b;
+    position: relative;
+}
+
+.head-icon {
+    top: 14px;
+    left: -10px;
+    height: 50px;
+    position: relative;
+    DISPLAY: inline;
+}
+
+.text-head {
+    top: -5px;
+    color: #f9f3f5;
+    letter-spacing: 4px;
+    font-size: 20px;
+    display: inline-block
+}
+
 
 @media screen and (max-width: 767px) {
-   
+       
     .main-container2--input--box {
         padding: 2% 20%;
     }
