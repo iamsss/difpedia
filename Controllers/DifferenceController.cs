@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace difpediaProject.Controllers
 {
+    [Route("api/[controller]")]
     public class DifferenceController : Controller
     {
 
@@ -14,12 +15,13 @@ namespace difpediaProject.Controllers
             this.context = context;
         }
 
-        [HttpGet]
-        public IActionResult GetDifference([FromBody]string differenceName)
+        [HttpPost("/post")] 
+        
+        public IActionResult GetDifference([FromBody]GetModel differenceName)
         {
 
             var difference = context.Differences
-           .Where(b => b.Name.Contains(differenceName)).ToList();
+           .Where(b => b.Name.Contains(differenceName.Name)).ToList();
             if (difference == null)
             {
                 return NotFound();
@@ -41,6 +43,10 @@ namespace difpediaProject.Controllers
             {
                 return BadRequest();
             }
+        }
+        public class GetModel
+        {
+            public string Name { get; set; }
         }
     }
 }
